@@ -42,6 +42,7 @@ dependencies {
 	providedCompile 'javax.servlet:jstl:1.2'
 	providedCompile 'org.springframework.boot:spring-boot-starter-jetty'
 
+	implementation 'com.google.appengine:appengine-api-1.0-sdk:+'
 	implementation 'org.springframework.cloud:spring-cloud-starter:2.2.3.RELEASE'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -64,16 +65,8 @@ test {
 appengine {
 	deploy {   // deploy configuration
 		projectId = "GCLOUD_CONFIG"
-		version = "appbuild-0-0-1-10"
+		version = "appbuild-0-0-1-11"
 		stopPreviousVersion = true  // default - stop the current version
 		promote = true              // default - & make this the current version
 	}
-}
-
-bootJar {
-	mainClassName = 'com.nttdata.gpc.demorestapi.DemorestapiApplication'
-}
-
-bootWar {
-	mainClassName = 'com.nttdata.gpc.demorestapi.DemorestapiApplication'
 }

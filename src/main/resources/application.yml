@@ -1,0 +1,14 @@
+logging:
+  level:
+    root: INFO
+    org.springframework: WARN
+    example: DEBUG
+
+spring:
+  main:
+    banner-mode: "off"
+
+management:
+  health:
+    probes:
+      enabled: true
