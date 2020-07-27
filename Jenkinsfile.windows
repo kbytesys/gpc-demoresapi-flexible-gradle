@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        GC_KEY = credentials('gcp_nnt_tesproject1')
+        GC_KEY = credentials('gcp_ntt_testproject1_key')
     }
 
     post {
@@ -45,10 +45,8 @@ pipeline {
 
         stage('deploygcp') {
             steps {
-
-                    echo "${GC_KEY}"
-                    bat './gradlew.bat appengineDeploy'
-
+                echo "${GC_KEY}"
+                bat './gradlew.bat appengineDeploy'
             }
         }
     }
