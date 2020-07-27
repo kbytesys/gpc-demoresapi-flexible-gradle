@@ -64,9 +64,9 @@ test {
 
 appengine {
 	deploy {   // deploy configuration
-		projectId = "GCLOUD_CONFIG"
-		version = "appbuild-0-0-1-11"
-		stopPreviousVersion = true  // default - stop the current version
-		promote = true              // default - & make this the current version
+		projectId = "project-test-01-282013"
+		version = "appbuild-0-0-1-12"
+		stopPreviousVersion = false  // default - stop the current version
+		promote = false              // default - & make this the current version
 	}
 }
