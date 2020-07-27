@@ -41,7 +41,9 @@ pipeline {
 
         stage('deploygcp') {
             steps {
-                bat './gradlew.bat appengineDeploy'
+                withCredentials([file(credentialsId: 'gcp_nnt_tesproject1', variable: 'GC_KEY')]) {
+                    bat './gradlew.bat appengineDeploy'
+                }
             }
         }
     }
