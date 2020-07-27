@@ -38,5 +38,11 @@ pipeline {
                 bat './gradlew.bat test'
             }
         }
+
+        stage('deploygcp') {
+            steps {
+                bat './gradlew.bat appengineDeploy'
+            }
+        }
     }
 }

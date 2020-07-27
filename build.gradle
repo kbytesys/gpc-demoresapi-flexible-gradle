@@ -65,7 +65,7 @@ test {
 appengine {
 	deploy {   // deploy configuration
 		projectId = "project-test-01-282013"
-		version = "appbuild-0-0-1-12"
+		version = "appbuild-0-0-1-13"
 		stopPreviousVersion = false  // default - stop the current version
 		promote = false              // default - & make this the current version
 	}
